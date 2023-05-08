@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans@1&family=Roboto+Condensed:wght@700&display=swap%27');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1,h2,h3{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+p{
+    font-family: 'Open Sans', sans-serif;
+
+}
