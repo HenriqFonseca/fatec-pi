@@ -1,15 +1,105 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans@1&family=Roboto+Condensed:wght@700&display=swap%27');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-h1,h2,h3{
     font-family: 'Roboto Condensed', sans-serif;
 }
 
-p{
-    font-family: 'Open Sans', sans-serif;
+h1{font-size: 4rem}
+h2{font-size: 3.5rem}
+h3{font-size: 3rem}
+h4{font-size: 2.5rem}
+h5{font-size: 1.75rem}
+p{font-size:1.375rem;}
 
+
+body{
+    display: flex;
+    justify-content: center;
 }
+
+.wrapper{
+    flex-direction: column;
+    justify-content: center;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    background-color: #000000;
+    max-width: 1400px;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+}
+
+.newsletter-container{
+    width: 100%;
+    background-color: bisque;
+    display: flex;
+}
+
+.newsletter-form-container{
+    width: 60%;
+    max-height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+}
+
+.newsletter-info{
+    width: 40%;
+    max-height: 180px;
+    background-color: #000000;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.newsletter-form-container>form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: #ffffff;
+    padding: 0;
+    margin: 0;
+}
+
+.input-container{
+    width: 30rem;
+    display: flex;
+    border: 3.5px solid #ffffff;
+}
+
+#newsletter-input{
+    width: 75%;
+    padding: 1rem;
+    font-size: 1.125rem;
+    margin: 0;
+    outline: 0;
+    border: none;
+}
+
+.input-container>button{
+width: 25%;
+color: #ffffff;
+background-color: #000000;
+padding: 1rem;
+border: none;
+margin: 0;
+font-weight: bold;
+font-size: 1.125rem;
+text-align: center;
+cursor: pointer;
+}
+
+
+
