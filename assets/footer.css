@@ -18,9 +18,10 @@
     --h6: 1.375rem;
     --p: 1.25rem;
 
-    --primary-color: ;
-    --secondary-color: ;
+    --primary-color: #000;
+    --secondary-color: #fff;
     --text-color: #000000;
+    --secondary-text-color: #fff;
 
     --primary-font: 'Roboto Condensed', Arial Black;
     --secondary-font: 'Roboto', sans-serif;
@@ -38,6 +39,10 @@ body{
     display: flex;
     justify-content: center;   
     align-items: center; 
+}
+
+label{
+    font-size: clamp(1vw,2vw,2rem); 
 }
 
 
@@ -63,12 +68,12 @@ footer{
 /* Newsletter  */
 .newsletter-container{
     width: 100%;
-    height: 40%;
     background-color: #000000;
     display: flex;
 }
 
 .newsletter-form-container{
+    padding-top: 10px;
     width: 60%;
     display: flex;
     justify-content: center;
@@ -123,7 +128,7 @@ padding: 1rem;
 border: none;
 margin: 0;
 font-weight: bold;
-font-size: 1.125rem;
+font-size: min(var(--h4),var(--p));
 text-align: center;
 cursor: pointer;
 }
@@ -134,14 +139,10 @@ cursor: pointer;
     display: flex;
     padding-top: 4rem;
     background-color: #000;
-    height: 60%;
     justify-content: space-around;
     color: #fff;
 }
 
-.footer-info-card{
-    border: 1px solid #fff;
-}
 
 .footer-info-card>ul{
     font-size: 22px;
@@ -152,3 +153,64 @@ cursor: pointer;
     color: #fff;
 }
 
+@media (max-width: 768px)
+{
+    .wrapper{
+        width: 100%;
+    }
+    label{
+        width: 100%;
+    }
+    .newsletter-container{
+        width: 100%;
+        padding-top: 10px;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .newsletter-form-container{
+        width: 100%;
+        display: flex;
+        background-color: #000000;
+    }
+    
+    .newsletter-info>h2{
+        font-size: var(--h5);
+    }
+    
+    .label-container{
+        padding-top: 15px;
+    }
+    .label-container>label>h4{
+        font-size: var(--p); 
+    }
+    
+    .input-container{
+        width: 70%;
+    }
+    
+    .input-container>button{
+        width: 30%;
+        text-align: center;
+    }
+
+
+/* infos do site  */
+    .footer-info-container{
+        display: flex;
+        flex-direction: column;
+        padding-top: 4rem;
+        justify-content: center;
+        padding-left: 10px;
+    }
+    
+    .footer-info-card{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .footer-info-card>ul{
+        padding-left: 10px;
+    }
+    
+}
