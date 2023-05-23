@@ -8,7 +8,7 @@
     display: block;
 }
 
-.painel{
+.painel {
     background-color: var(--primary-color);
     font-weight: bold;
     font-family: var(--primary-font);
@@ -17,12 +17,12 @@
     height: 220px;
 }
 
- 
-.painel>h1{
+
+.painel>h1 {
     margin: auto;
 }
 
-.name{
+.name {
     text-transform: uppercase;
     font-weight: bold;
     font-family: var(--primary-font);
@@ -37,6 +37,7 @@
 /* MUDAR DPS PARA 3 COLUNAS */
 .card-container {
     display: grid;
+    padding: 20px;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
@@ -73,7 +74,7 @@
     height: 50px;
 }
 
-.perfil-item > .icon {
+.perfil-item>.icon {
     display: grid;
     place-items: center;
     border-radius: 50% 0 0 50%;
@@ -82,27 +83,14 @@
     padding: 0 5px;
 }
 
-.perfil-item > .icon img {
+.perfil-item>.icon img {
     height: 40px;
     overflow: hidden;
 }
 
-.perfil-item > .label {
+.perfil-item>.label {
     height: 100%;
 }
-
-/* .perfil-logo {
-    position: relative;
-    height: 35px;
-}
-
-.perfil-logo > img {
-    position: absolute;
-    width: 39px;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: var(--primary-color);
-} */
 
 .perfil-info {
     height: 100%;
@@ -111,18 +99,6 @@
     flex: 1;
     color: #fff;
     font-weight: 600;
-}
-
-.perfil-name {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 90%;
-    padding: 4.9px;
-    height: 109%;
-    margin-left: 5%;
-    color: var(--secondary-color);
-    border-radius: 6% 0 0 6%;
 }
 
 .perfil-name:not(:nth-child(1)) {
@@ -141,6 +117,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px;
 }
 
 .about-project-text {
@@ -156,10 +133,17 @@
 
 p {
     margin-top: 30px;
-    font-size: 1.2rem;
-    font-family: var(--primary-font);
+    font-size: clamp(1.25rem, 1vw, 1.30rem);
+    font-family: var(--seconday-font);
 }
 
 .about-project-img {
-    width: 45%;
+    min-width: 45%;
+}
+
+@media (max-width:768px) {
+
+    #project {
+        align-items: start;
+    }
 }
