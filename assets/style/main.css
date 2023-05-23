@@ -42,8 +42,8 @@ a {
     --primary-font: 'Roboto Condensed', sans-serif;
     --secondary-font: 'Roboto', sans-serif;
 
-    --primary-color: ;
-    --secondary-color: ;
+    --primary-color: #000;
+    --secondary-color: #fff;
 }
 
 body, html {

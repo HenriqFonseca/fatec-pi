@@ -1,0 +1,132 @@
+@import 'main.css';
+
+
+
+.divider {
+    width: 100%;
+    height: 100px;
+    display: block;
+}
+
+.painel{
+    background-color: var(--primary-color);
+    font-weight: bold;
+    font-family: var(--primary-font);
+    color: var(--secondary-color);
+    display: flex;
+    height: 220px;
+}
+
+ 
+.painel>h1{
+    margin: auto;
+}
+
+.name{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: var(--primary-font);
+}
+
+
+.content-wrapper {
+    max-width: 1360px;
+    margin: 0 auto;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.card {
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    min-height: 300px;
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0 auto;
+}
+
+.card>img:last-child {
+    width: 80%;
+    margin: auto;
+    padding-bottom: 10%;
+}
+
+#perfil-img {
+    width: 70%;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.perfil-item {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.perfil-logo {
+    position: relative;
+    height: 35px;
+}
+
+.perfil-logo>img {
+    position: absolute;
+    width: 39px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--primary-color);
+    border-radius: 50%;
+}
+
+.perfil-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    padding: 4.9px;
+    height: 109%;
+    margin-left: 5%;
+    color: var(--secondary-color);
+    border-radius: 6% 0 0 6%;
+}
+
+.perfil-name:not(:nth-child(1)) {
+    background-color: #000;
+}
+
+.linkedin {
+    background-color: #0A66C2 !important;
+}
+
+#project {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-project-text {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    width: 40%;
+}
+
+.about-project-text>h2 {
+    margin: 0;
+}
+
+p {
+    margin-top: 30px;
+    font-size: 1.2rem;
+    font-family: var(--primary-font);
+}
+
+.about-project-img {
+    width: 45%;
+}
