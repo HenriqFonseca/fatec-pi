@@ -69,20 +69,48 @@
     margin: 0 auto;
     display: flex;
     align-items: center;
+    overflow: hidden;
+    height: 50px;
 }
 
-.perfil-logo {
+.perfil-item > .icon {
+    display: grid;
+    place-items: center;
+    border-radius: 50% 0 0 50%;
+    overflow: hidden;
+    height: 100%;
+    padding: 0 5px;
+}
+
+.perfil-item > .icon img {
+    height: 40px;
+    overflow: hidden;
+}
+
+.perfil-item > .label {
+    height: 100%;
+}
+
+/* .perfil-logo {
     position: relative;
     height: 35px;
 }
 
-.perfil-logo>img {
+.perfil-logo > img {
     position: absolute;
     width: 39px;
     top: 50%;
     transform: translateY(-50%);
     background-color: var(--primary-color);
-    border-radius: 50%;
+} */
+
+.perfil-info {
+    height: 100%;
+    display: grid;
+    place-items: center;
+    flex: 1;
+    color: #fff;
+    font-weight: 600;
 }
 
 .perfil-name {
@@ -101,8 +129,12 @@
     background-color: #000;
 }
 
-.linkedin {
+.bg-linkedin {
     background-color: #0A66C2 !important;
+}
+
+.bg-github {
+    background-color: #000 !important;
 }
 
 #project {
