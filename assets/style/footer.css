@@ -1,7 +1,6 @@
 @import 'main.css';
 
 footer {
-    height: 300px;
     width: 100vw;
     background-color: grey;
     position: fixed;
@@ -15,7 +14,7 @@ footer {
 }
 
 /* ===================== NEWSLETTER ===================== */
-.newsletter-container {
+#newsletter-container {
     display: flex;
     background-color: #000;
     padding: 35px;
@@ -87,7 +86,7 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .newsletter-container{
+    #newsletter-container{
         flex-direction: column-reverse;
         align-items: center;
         padding: 25px;
@@ -103,3 +102,31 @@ footer {
 }
 
 /* ===================== FOOTER INFO ===================== */
+
+#footer-info-container{
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    color: #fff;
+}
+li{
+    list-style: none;
+    padding-bottom: 7px;
+}
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    #footer-info-container{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-item{
+        border-bottom: 1px solid #404040;
+    }
+}
