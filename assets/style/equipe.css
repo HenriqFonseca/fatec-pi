@@ -1,4 +1,4 @@
-@import 'main.css';
+@import 'global.css';
 
 
 
@@ -8,18 +8,15 @@
     display: block;
 }
 
-.painel {
+.banner {
     background-color: var(--primary-color);
     font-weight: bold;
     font-family: var(--primary-font);
     color: var(--secondary-color);
     display: flex;
+    justify-content: center;
+    align-items: center;
     height: 220px;
-}
-
-
-.painel>h1 {
-    margin: auto;
 }
 
 .name {
