@@ -59,3 +59,17 @@ body, html {
 header {
     background: black;
 }
+
+/* SEPARAR SEÇÕES */
+.divider {
+    width: 100%;
+    height: 100px;
+    display: block;
+}
+
+/* CENTRALIZAR CONTEUDO DA PÁGINA */
+
+.content-wrapper {
+    max-width: 1360px;
+    margin: 0 auto;
+}
