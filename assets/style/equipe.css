@@ -2,11 +2,7 @@
 
 
 
-.divider {
-    width: 100%;
-    height: 100px;
-    display: block;
-}
+
 
 .banner {
     background-color: var(--primary-color);
