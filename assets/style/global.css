@@ -7,8 +7,8 @@
 /* Peguei isso de um cara aleatório na net */
 
 h1 {
-    font-size: 2.441rem !important;
-    margin: 0 !important;
+    font-size: 2.441rem;
+    margin: 0;
 }
 
 h2 {
@@ -55,9 +55,23 @@ body, html {
     font-family: var(--secondary-font);
 }
 
-/* temp */
-header {
-    background: black;
+
+    background-color: var(--primary-color);
+    font-weight: bold;
+    font-family: var(--primary-font);
+    color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 120px 5vw;
+    height: 30vh;
+    background-size: cover;
+    text-align: center;
+    background-position: center;
+}
+
+header > .banner > .title {
+    font-size: 3rem;
 }
 
 /* SEPARAR SEÇÕES */

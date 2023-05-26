@@ -1,0 +1,11 @@
+@import 'global.css';
+
+header > .banner {
+    background-image: url('../img/atividades/banner-ouvido-absoluto-lg.jpg');
+}
+
+@media screen and (max-width: 720px) {
+    header > .banner {
+        background-image: url('../img/atividades/banner-ouvido-absoluto-sm.jpg');
+    }
+}

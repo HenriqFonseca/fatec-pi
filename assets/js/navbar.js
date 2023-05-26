@@ -17,5 +17,6 @@ document.addEventListener('scroll', (e) => {
     
     let top = (window.pageYOffset || document.scrollTop)  - (document.clientTop || 0);
 
-    navbarElement.style.background = top > 120 ? 'rgba(0, 0, 0, 1)' : 'rgba(0, 0, 0, 0)';
+    navbarElement.style.background = top > 120 ? 'rgba(0, 0, 0, .5)' : 'rgba(0, 0, 0, 0)';
+    navbarElement.style.backdropFilter = top > 120 ? 'blur(20px)' : 'blur(0)';
 })
