@@ -48,6 +48,8 @@ a {
     --secondary-color: #fff;
 
     --main-padding: 20px 40px;
+    --horizontal-padding: 40px;
+    --vertical-padding: 20px;
 }
 
 body, html {
