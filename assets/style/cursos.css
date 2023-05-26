@@ -20,7 +20,7 @@
 
 .card-item{
     position: relative;
-    background-color: bisque;
+    -webkit-box-shadow: inset 0px -22px 71px -25px rgba(0,0,0,0.75); -moz-box-shadow: inset 0px -22px 71px -25px rgba(0,0,0,0.75); box-shadow: inset 0px -22px 71px -25px rgba(0,0,0,0.75);
 }
 
 .card-text{
@@ -40,14 +40,7 @@
     max-width: 300px;
     height: clamp(250px,20vw,300px);
 }
-.translucent{
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0),rgba(0,0,0,0.7) );
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 30%;
-}
+
 
 
 .card-container{
