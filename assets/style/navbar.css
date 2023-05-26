@@ -9,6 +9,7 @@
     width: 100vw;
     box-sizing: border-box;
     max-height: 120px;
+    transition: .2s ease;
 }
 
 .navbar a{
