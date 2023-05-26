@@ -38,15 +38,13 @@
 .card-img{
     width: clamp(250px,20vw,300px);
     max-width: 300px;
-    height: clamp(250px,20vw,300px);
+    height: 100%;
 }
-
-
 
 .card-container{
     display: flex;
     gap: 3rem;
-    overflow-x: auto;
+    overflow: scroll hidden;
 }
 .card-container::-webkit-scrollbar{
     padding: 5px;
