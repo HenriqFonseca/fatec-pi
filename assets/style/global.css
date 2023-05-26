@@ -46,6 +46,8 @@ a {
 
     --primary-color: #000;
     --secondary-color: #fff;
+
+    --main-padding: 20px 40px;
 }
 
 body, html {
@@ -103,4 +105,10 @@ header > .banner > .title {
 .content-wrapper {
     max-width: 1360px;
     margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+    :root {
+        --main-padding: 10px 20px;
+    }
 }

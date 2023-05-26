@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
+    padding: var(--main-padding);
     position: fixed;
     top: 0;
     left: 0;
@@ -90,7 +90,7 @@
     display: none;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 768px) {
     .links-wrapper {
         position: fixed;
         transform: translateX(100%);
