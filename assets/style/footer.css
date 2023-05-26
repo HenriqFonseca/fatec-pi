@@ -1,15 +1,9 @@
-@import 'global.css';
 
 footer {
     width: 100%;
     background-color: #000;
 }
 
-.wrapper {
-    max-width: 1360px;
-    margin: 0 auto;
-    background-color: blanchedalmond;
-}
 
 /* ===================== NEWSLETTER ===================== */
 #newsletter-container {

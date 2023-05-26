@@ -1,0 +1,60 @@
+@import 'global.css';
+@import 'footer.css';
+@import 'navbar.css';
+
+.banner {
+    background-color: var(--primary-color);
+    font-weight: bold;
+    font-family: var(--primary-font);
+    color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 220px;
+}
+
+.course-container{
+    gap: 20px;
+    padding: 20px;
+}
+
+.card-item{
+    position: relative;
+    -webkit-box-shadow: inset 0px -22px 71px -25px rgba(0,0,0,0.75); -moz-box-shadow: inset 0px -22px 71px -25px rgba(0,0,0,0.75); box-shadow: inset 0px -22px 71px -25px rgba(0,0,0,0.75);
+}
+
+.card-text{
+    position: absolute;
+    text-align: center;
+    color: #fff;
+    width: 100%;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+
+.card-img{
+    width: clamp(250px,20vw,300px);
+    max-width: 300px;
+    height: clamp(250px,20vw,300px);
+}
+
+
+
+.card-container{
+    display: flex;
+    gap: 3rem;
+    overflow-x: auto;
+}
+.card-container::-webkit-scrollbar{
+    padding: 5px;
+    height: 8px;
+    background-color: #f1f1f1;
+}
+.card-container::-webkit-scrollbar-thumb{
+    background-color: #bfbdbd;
+    border-radius: 10px;
+}
+

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;500;700&display=swap');
 
-@import 'navbar.css';
 @import 'footer.css';
+@import 'navbar.css';
 
 
 /* Peguei isso de um cara aleatório na net */
@@ -58,4 +58,18 @@ body, html {
 /* temp */
 header {
     background: black;
+}
+
+/* SEPARAR SEÇÕES */
+.divider {
+    width: 100%;
+    height: 100px;
+    display: block;
+}
+
+/* CENTRALIZAR CONTEUDO DA PÁGINA */
+
+.content-wrapper {
+    max-width: 1360px;
+    margin: 0 auto;
 }
