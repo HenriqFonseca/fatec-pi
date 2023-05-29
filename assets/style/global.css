@@ -100,6 +100,12 @@ main.wrapper {
     gap: 10px;
     user-select: none;
 }
+
+.btn.btn:is(a, button).dark {
+    color: #000;
+    border: 1px solid #000;
+}
+
 @media (hover: hover) {
     .btn:is(a, button):hover{
         background: #fff;
