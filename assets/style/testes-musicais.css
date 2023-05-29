@@ -28,15 +28,32 @@
 
 .notes-container > .note.right {
     color: #00ff6a;
+    opacity: .5;
 }
 
 .notes-container > .note.wrong {
     color: #ff6200;
+    opacity: .7;
 }
 
 .btn.playing {
     background: #fff;
     color: #000;
+}
+
+.teste-jogo {
+    background-color: var(--primary-color);
+    font-weight: bold;
+    font-family: var(--primary-font);
+    color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    background-size: cover;
+    text-align: center;
+    background-position: center;
 }
 
 @media screen and (max-width: 768px) {
