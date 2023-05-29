@@ -141,4 +141,4 @@ function restartGame() {
     btnTocar.innerHTML = `<span class="material-symbols-outlined">play_circle</span> TOCAR`;
     btnTocar.classList.remove('playing');
     btnTocar.setAttribute('data-status', 'play');
-}
+} // 
