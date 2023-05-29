@@ -1,11 +1,12 @@
 @import 'global.css';
+@import 'testes-musicais.css';
 
-header > .banner {
+header > .banner.ouvido-absoluto {
     background-image: url('../img/atividades/banner-ouvido-absoluto-lg.jpg');
 }
 
 @media screen and (max-width: 720px) {
-    header > .banner {
+    header > .banner.ouvido-absoluto {
         background-image: url('../img/atividades/banner-ouvido-absoluto-sm.jpg');
     }
 }

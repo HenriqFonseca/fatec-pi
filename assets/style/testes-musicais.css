@@ -1,0 +1,44 @@
+.notes-container{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.notes-container > .note {
+    color: #808080;
+    font-size: 1.7rem;
+    font-weight: 500;
+    transition: .2s ease;
+    cursor: pointer;
+}
+
+.notes-container > .note.selected {
+    color: #ffffff;
+}
+
+.notes-container > .note.selected.right {
+    color: #00ff6a;
+}
+
+.notes-container > .note.selected.wrong {
+    color: #ff6200;
+}
+
+.btn.playing {
+    background: #fff;
+    color: #000;
+}
+
+@media screen and (max-width: 768px) {
+    .notes-container {
+        gap: 15px;
+    }
+
+    .notes-container > .note {
+        color: #808080;
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+    
+}

@@ -89,11 +89,17 @@ header > .banner > .title {
     border-radius: 3px;
     cursor: pointer;
     transition: .2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    user-select: none;
 }
-
-.btn:is(a, button):hover{
-    background: #fff;
-    color: #000;
+@media (hover: hover) {
+    .btn:is(a, button):hover{
+        background: #fff;
+        color: #000;
+    }
 }
 /* SEPARAR SEÇÕES */
 .divider {
