@@ -106,6 +106,12 @@ main.wrapper {
     border: 1px solid #000;
 }
 
+.btn-cta{
+    font-weight: bold;
+}
+
+
+
 @media (hover: hover) {
     .btn:is(a, button):hover{
         background: #fff;
