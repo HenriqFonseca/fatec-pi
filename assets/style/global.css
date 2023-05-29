@@ -80,6 +80,11 @@ header > .banner > .title {
     font-size: clamp(1.7rem, 9vw, 3rem);
 }
 
+main.wrapper {
+    padding: calc(120px + var(--vertical-padding)) 0 120px 0;
+    background: #000;
+}
+
 /* BTN */
 .btn:is(a, button) {
     padding: 15px 25px;
