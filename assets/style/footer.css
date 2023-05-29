@@ -9,7 +9,7 @@ footer {
 #newsletter-container {
     display: flex;
     background-color: #000;
-    padding: 35px;
+    padding: var(--main-padding);
 }
 
 .newsletter-form-container {
@@ -22,33 +22,37 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 10px;
     flex-direction: column;
 }
 
 .input-title {
     color: #fff;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     letter-spacing: 0.1px;
     font-family: var(--primary-font);
     font-weight: 600;
 }
 
 .input-submit {
-
     display: flex;
     justify-content: center;
     width: 100%;
     margin: 0 auto;
 }
 
-.input-submit>input {
+.input-submit > input {
     font-family: var(--primary-font);
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     font-weight: bold;
     width: 60%;
     padding: 18px;
     outline: 0;
     border: none;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing: border-box;
 }
 
 .newsletter-button {
@@ -64,13 +68,6 @@ footer {
     cursor: pointer;
 }
 
-.newsletter-button:hover{
-    border: 1px solid #fff;
-    transform: scale(1.02);
-    transition: .5s;
-}
-
-
 .newsletter-text {
     text-align: center;
     width: 40%;
@@ -78,10 +75,14 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .input-title {
+        text-align: center;
+        font-size: 1rem;
+    }
+
     #newsletter-container{
         flex-direction: column-reverse;
         align-items: center;
-        padding: 25px;
     }
 
     .newsletter-text{
@@ -89,6 +90,15 @@ footer {
         width: 100%;
     }
     .newsletter-form-container{
+        width: 100%;
+    }
+
+    .input-submit {
+        flex-direction: column;
+    }
+
+    .input-submit > input {
+        font-size: 1rem;
         width: 100%;
     }
 }

@@ -7,21 +7,30 @@
 
 .notes-container > .note {
     color: #808080;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     font-weight: 500;
     transition: .2s ease;
     cursor: pointer;
+    border: none;
+    background: transparent;
+    outline: none;
+    margin: 0;
+    padding: 0;
+}
+
+.notes-container > .note:disabled {
+    opacity: .2;
 }
 
 .notes-container > .note.selected {
     color: #ffffff;
 }
 
-.notes-container > .note.selected.right {
+.notes-container > .note.right {
     color: #00ff6a;
 }
 
-.notes-container > .note.selected.wrong {
+.notes-container > .note.wrong {
     color: #ff6200;
 }
 

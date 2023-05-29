@@ -13,15 +13,26 @@ const selectRandomNote = () => {
     currentNote = randomNote[0];
 }
 
-btnTocar.addEventListener('click', async () => {    
+btnTocar.addEventListener('click', async () => {   
+
+    if(btnTocar.getAttribute('data-status') == 'play-again'){
+        restartGame();
+        return -1;
+    }
+
+    if(btnTocar.getAttribute('data-status') == 'playing') return -1;
 
     btnTocar.innerHTML = `<span class="material-symbols-outlined">pause_circle</span> TOCANDO`;
     btnTocar.classList.add('playing');
+    btnTocar.setAttribute('data-status', 'playing');
+    disableAllNotesButtons();
     
     await playNote(currentNote);
     
     btnTocar.innerHTML = `<span class="material-symbols-outlined">play_circle</span> TOCAR`;
     btnTocar.classList.remove('playing');
+    btnTocar.setAttribute('data-status', 'play');
+    ableAllNotesButtons();
 })
 
 const path = '../../assets/audios/notas/';
@@ -61,18 +72,28 @@ for(let noteElement of notesElement){
 
 let currentSelectedNote;
 
-function unselectAllNotes() {
+function unselectAllNotesButtons() {
     for(let noteElement of notesElement){
         noteElement.classList.remove('selected');
+        noteElement.classList.remove('wrong');
+        noteElement.classList.remove('right');
+        noteElement.disabled = false;
     }
 }
 
-let rightAnswers = 0;
-let level = 1;
-let wrongAnswers = 0;
+function disableAllNotesButtons() {
+    for(let noteElement of notesElement){
+        noteElement.disabled = 'disable';
+    }
+}
+
+function ableAllNotesButtons() {
+    for(let noteElement of notesElement){
+        noteElement.disabled = false;
+    }
+}
 
 function selectNote(element){
-    unselectAllNotes();
     let elementNote = element.getAttribute('data-note');
     
     if(elementNote == currentNote) {
@@ -86,15 +107,38 @@ function selectNote(element){
     currentSelectedNote = elementNote
     element.classList.add('selected');
 
-    level++;
+    disableAllNotesButtons();
+
+
+    // Muda o botão tocar/tocando para "jogar novamente"
+    btnTocar.setAttribute('data-status', 'play-again');
+    btnTocar.innerText = 'JOGAR DE NOVO';
+    
 }
 
-function rightAnswer() {
-    alert('right')
+const testeTitle = document.querySelector('#teste-title');
 
-    rightAnswers++;   
+function rightAnswer() {
+    testeTitle.innerText = 'VOCÊ ACERTOU';
 }
 
 function wrongAnswer() {
-    wrongAnswers++;
+    testeTitle.innerText = 'A NOTA NÃO ERA ESSA';
+    
+    for(let noteElement of notesElement){
+        if(noteElement.getAttribute('data-note') == currentNote){
+            noteElement.classList.add('right')
+        }
+    }
+}
+
+function restartGame() {
+    selectRandomNote();
+
+    testeTitle.innerText = 'QUE NOTA É ESSA?';
+    unselectAllNotesButtons();
+
+    btnTocar.innerHTML = `<span class="material-symbols-outlined">play_circle</span> TOCAR`;
+    btnTocar.classList.remove('playing');
+    btnTocar.setAttribute('data-status', 'play');
 }

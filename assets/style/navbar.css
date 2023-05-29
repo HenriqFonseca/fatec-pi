@@ -129,11 +129,12 @@
 
     .dropdown-content {
         left: 0;
+        border: none;
     }
 
     .dropdown-content a {
         padding: 5px 10px;
-        border-left: 1px solid red;
+        border-left: 3px solid #ffffff46;
         margin: 2px 0;
         font-weight: 500;
         font-size: 1rem;
