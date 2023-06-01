@@ -72,7 +72,7 @@ header > .banner {
     justify-content: center;
     align-items: center;
     padding: calc(var(--navbar-height) + var(--vertical-padding)) 5vw var(--navbar-height) 5vw;
-    height: 20vh;
+    height: 35vh;
     background-size: cover;
     text-align: center;
     background-position: center;
@@ -80,11 +80,28 @@ header > .banner {
 
 header > .banner > .title {
     font-size: clamp(1.7rem, 9vw, 3rem);
+    text-transform: uppercase;
 }
 
 main.wrapper {
     padding: calc(var(--navbar-height) + var(--vertical-padding)) 0 var(--navbar-height) 0;
     background: #000;
+}
+
+main > section {
+    padding: calc(var(--vertical-padding) * 2) var(--horizontal-padding);
+}
+
+section > .description {
+    color: rgba(0, 0, 0, .5);
+    min-width: 400px;
+    font-size: 1.2rem;
+}
+
+section.wrapper {
+    width: 60%;
+    margin: 0 auto;
+    min-width: 400px
 }
 
 /* BTN */
@@ -101,9 +118,10 @@ main.wrapper {
     justify-content: center;
     gap: 10px;
     user-select: none;
-    font-size: clamp(0.90,1vw,5rem);
+    font-size: clamp(1rem,1vw,5rem);
     background: transparent;
     line-height: 2rem;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 .btn.btn:is(a, button).dark {
@@ -117,11 +135,9 @@ main.wrapper {
 
 
 .btn-cta{
-    font-weight: bold;
+    font-weight: 900;
 
 }
-
-
 
 @media (hover: hover) {
     .btn:is(a, button):hover{
