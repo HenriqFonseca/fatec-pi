@@ -138,10 +138,6 @@ a{
 @media (max-width: 768px) {
     #footer-info-container{
         flex-direction: column;
-        gap: 10px;
-    }
-
-    .footer-item{
-        border-bottom: 1px solid #404040;
+        gap: 20px;
     }
 }

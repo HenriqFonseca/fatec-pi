@@ -50,6 +50,8 @@ a {
     --main-padding: 20px 40px;
     --horizontal-padding: 40px;
     --vertical-padding: 20px;
+
+    --navbar-height: 120px;
 }
 
 body, html {
@@ -69,8 +71,8 @@ header > .banner {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 120px 5vw;
-    height: 40vh;
+    padding: calc(var(--navbar-height) + var(--vertical-padding)) 5vw var(--navbar-height) 5vw;
+    height: 20vh;
     background-size: cover;
     text-align: center;
     background-position: center;
@@ -81,7 +83,7 @@ header > .banner > .title {
 }
 
 main.wrapper {
-    padding: calc(120px + var(--vertical-padding)) 0 120px 0;
+    padding: calc(var(--navbar-height) + var(--vertical-padding)) 0 var(--navbar-height) 0;
     background: #000;
 }
 
@@ -99,6 +101,9 @@ main.wrapper {
     justify-content: center;
     gap: 10px;
     user-select: none;
+    font-size: clamp(0.90,1vw,5rem);
+    background: transparent;
+    line-height: 2rem;
 }
 
 .btn.btn:is(a, button).dark {
@@ -106,8 +111,14 @@ main.wrapper {
     border: 1px solid #000;
 }
 
+.btn.btn:is(a, button):disabled {
+    opacity: .5;
+}
+
+
 .btn-cta{
     font-weight: bold;
+
 }
 
 
@@ -121,7 +132,7 @@ main.wrapper {
 /* SEPARAR SEÇÕES */
 .divider {
     width: 100%;
-    height: 100px;
+    height: var(--vertical-padding);
     display: block;
 }
 

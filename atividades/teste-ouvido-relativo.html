@@ -9,6 +9,7 @@
     <link rel='stylesheet' type='text/css' media='screen' href='../assets/style/teste-ouvido-absoluto.css'>
 
     <script src="../assets/js/navbar.js" defer></script>
+    <script src="../assets/js/testes/ouvido-absoluto.js" defer></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
@@ -45,34 +46,44 @@
                 </span>
             </div>
         </nav>
-        <section class="banner">
-            <h1></h1>
-        </section>
     </header>
 
-    <main>
-
+    <main class="wrapper">
+        <section class="teste-jogo">
+            <h1 class="title" id="teste-title">QUE NOTA É ESSA?</h1>
+            <div class="buttons">
+                <button class="btn" id="btn-tocar-referencia" data-status="play">
+                    <span class="material-symbols-outlined">
+                        play_circle
+                    </span>
+                    TOCAR LÁ
+                </button>
+                <button class="btn" id="btn-tocar" data-status="play">
+                    <span class="material-symbols-outlined">
+                        play_circle
+                    </span>
+                    TOCAR
+                </button>
+            </div>
+            <div class="notes-container">
+                <button class="note" data-note="c">C</button>
+                <button class="note" data-note="c#">C#</button>
+                <button class="note" data-note="d">D</button>
+                <button class="note" data-note="d#">D#</button>
+                <button class="note" data-note="e">E</button>
+                <button class="note" data-note="f">F</button>
+                <button class="note" data-note="f#">F#</button>
+                <button class="note" data-note="g">G</button>
+                <button class="note" data-note="g#">G#</button>
+                <button class="note" data-note="a">A</button>
+                <button class="note" data-note="a#">A#</button>
+                <button class="note" data-note="b">B</button>
+            </div>
+        </section>
     </main>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <footer>
+        <div class="wrapper">
             <!-- ================ NEWSLETTER ================ -->
             <section id="newsletter-container">
                 <!-- PARTE DO INPUT -->
@@ -89,23 +100,23 @@
                 </article>
                 <!-- PARTE DO TEXTO -->
                 <article class="newsletter-text">
-                    <h1>ASSINE NOSSA<br>NEWSLETTER</h1>
+                    <h2>ASSINE NOSSA<br>NEWSLETTER</h2>
                 </article>
             </section>
             <!-- ================ FOOTER INFO ================ -->
             <section id="footer-info-container">
                 <a href="/">
-                    <img src="assets/img/logo.svg" alt="Logo da GB Academia de Música" class="logo">
+                    <img src="../assets/img/logo.svg" alt="Logo da GB Academia de Música" class="logo">
                 </a>
                 <article class="footer-item">
                     <h3>SITE OVERVIEW</h3>
                     <ul>
-                        <a href="#"><li>Página inicial</li></a>
-                        <a href="#"><li>Atividades</li></a>
-                        <a href="#"><li>Sobre</li></a>
-                        <a href="#"><li>Cursos</li></a>
-                        <a href="#"><li>Contato</li></a>
-                        <a href="#"><li>Equipe de desenvolvimento</li></a>
+                        <li>Página inicial</li>
+                        <li>Atividades</li>
+                        <li>Sobre</li>
+                        <li>Cursos</li>
+                        <li>Contato</li>
+                        <li>Equipe de desenvolvimento</li>
                     </ul>
                 </article>
                 <article class="footer-item">
@@ -118,12 +129,13 @@
                 <article class="footer-item">
                     <h3>REDES SOCIAIS</h3>
                     <ul>
-                        <a href="#"><li><img width="28px" src="./assets/img/whatsapp.svg" alt=""> gbacademiademusica</li></a>
-                        <a href="#"><li><img src="./assets/img/instagram.svg" alt=""> gbacademiademusica</li></a>
-                        <a href="#"><li><img src="./assets/img/facebook.png" alt=""> gbacademiademusica</li></a>
+                        <li>gbacademiademusica</li>
+                        <li>gbacademiademusica</li>
+                        <li>gbacademiademusica</li>
                     </ul>
                 </article>
             </section>
+        </div>
     </footer>
 </body>
 

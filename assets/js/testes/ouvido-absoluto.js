@@ -1,4 +1,5 @@
 const btnTocar = document.querySelector('#btn-tocar');
+const btnTocarReferencia = document.querySelector('#btn-tocar-referencia');
 
 let currentNote;
 
@@ -12,6 +13,20 @@ const selectRandomNote = () => {
     randomNote = noteEntries[noteIndex];
     currentNote = randomNote[0];
 }
+
+btnTocarReferencia.addEventListener('click', async () => {
+    btnTocarReferencia.innerHTML = `<span class="material-symbols-outlined">pause_circle</span> TOCANDO`;
+    btnTocarReferencia.classList.add('playing');
+    btnTocarReferencia.setAttribute('data-status', 'playing');
+    disableAllNotesButtons();
+    
+    await playNote('a');
+    
+    btnTocarReferencia.innerHTML = `<span class="material-symbols-outlined">play_circle</span> TOCAR LÁ`;
+    btnTocarReferencia.classList.remove('playing');
+    btnTocarReferencia.setAttribute('data-status', 'play');
+    ableAllNotesButtons();
+})
 
 btnTocar.addEventListener('click', async () => {   
 
@@ -113,6 +128,7 @@ function selectNote(element){
     // Muda o botão tocar/tocando para "jogar novamente"
     btnTocar.setAttribute('data-status', 'play-again');
     btnTocar.innerText = 'JOGAR DE NOVO';
+    btnTocarReferencia.disabled = 'disable';
     
 }
 
@@ -141,4 +157,6 @@ function restartGame() {
     btnTocar.innerHTML = `<span class="material-symbols-outlined">play_circle</span> TOCAR`;
     btnTocar.classList.remove('playing');
     btnTocar.setAttribute('data-status', 'play');
-} // 
+
+    btnTocarReferencia.disabled = false;
+} 

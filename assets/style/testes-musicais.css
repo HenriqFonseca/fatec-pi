@@ -56,6 +56,12 @@
     background-position: center;
 }
 
+.teste-jogo > .buttons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
 @media screen and (max-width: 768px) {
     .notes-container {
         gap: 15px;
