@@ -14,41 +14,46 @@ const selectRandomNote = () => {
     currentNote = randomNote[0];
 }
 
-btnTocarReferencia.addEventListener('click', async () => {
-    btnTocarReferencia.innerHTML = `<span class="material-symbols-outlined">pause_circle</span> TOCANDO`;
-    btnTocarReferencia.classList.add('playing');
-    btnTocarReferencia.setAttribute('data-status', 'playing');
-    disableAllNotesButtons();
-    
-    await playNote('a');
-    
-    btnTocarReferencia.innerHTML = `<span class="material-symbols-outlined">play_circle</span> TOCAR LÁ`;
-    btnTocarReferencia.classList.remove('playing');
-    btnTocarReferencia.setAttribute('data-status', 'play');
-    ableAllNotesButtons();
-})
+if(btnTocarReferencia){
+    btnTocarReferencia.addEventListener('click', async () => {
+        btnTocarReferencia.innerHTML = `<span class="material-symbols-outlined">pause_circle</span> TOCANDO`;
+        btnTocarReferencia.classList.add('playing');
+        btnTocarReferencia.setAttribute('data-status', 'playing');
+        disableAllNotesButtons();
+        
+        await playNote('a');
+        
+        btnTocarReferencia.innerHTML = `<span class="material-symbols-outlined">play_circle</span> TOCAR LÁ`;
+        btnTocarReferencia.classList.remove('playing');
+        btnTocarReferencia.setAttribute('data-status', 'play');
+        ableAllNotesButtons();
+    })
+}
 
-btnTocar.addEventListener('click', async () => {   
+if(btnTocar){
+    btnTocar.addEventListener('click', async () => {   
 
-    if(btnTocar.getAttribute('data-status') == 'play-again'){
-        restartGame();
-        return -1;
-    }
-
-    if(btnTocar.getAttribute('data-status') == 'playing') return -1;
-
-    btnTocar.innerHTML = `<span class="material-symbols-outlined">pause_circle</span> TOCANDO`;
-    btnTocar.classList.add('playing');
-    btnTocar.setAttribute('data-status', 'playing');
-    disableAllNotesButtons();
+        if(btnTocar.getAttribute('data-status') == 'play-again'){
+            restartGame();
+            return -1;
+        }
     
-    await playNote(currentNote);
+        if(btnTocar.getAttribute('data-status') == 'playing') return -1;
     
-    btnTocar.innerHTML = `<span class="material-symbols-outlined">play_circle</span> TOCAR`;
-    btnTocar.classList.remove('playing');
-    btnTocar.setAttribute('data-status', 'play');
-    ableAllNotesButtons();
-})
+        btnTocar.innerHTML = `<span class="material-symbols-outlined">pause_circle</span> TOCANDO`;
+        btnTocar.classList.add('playing');
+        btnTocar.setAttribute('data-status', 'playing');
+        disableAllNotesButtons();
+        
+        await playNote(currentNote);
+        
+        btnTocar.innerHTML = `<span class="material-symbols-outlined">play_circle</span> TOCAR`;
+        btnTocar.classList.remove('playing');
+        btnTocar.setAttribute('data-status', 'play');
+        ableAllNotesButtons();
+    })
+    
+}
 
 const path = '../../assets/audios/notas/';
 
