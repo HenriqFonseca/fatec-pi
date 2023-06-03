@@ -94,14 +94,17 @@ main > section {
 
 section > .description {
     color: rgba(0, 0, 0, .5);
-    min-width: 400px;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 section.wrapper {
     width: 60%;
     margin: 0 auto;
-    min-width: 400px
+}
+
+.section-title {
+    text-transform: uppercase;
+    margin-bottom: 20px;
 }
 
 /* BTN */
@@ -162,5 +165,10 @@ section.wrapper {
 @media screen and (max-width: 768px) {
     :root {
         --main-padding: 10px 20px;
+    }
+
+    section.wrapper{
+        width: auto;
+        margin: 0 auto;
     }
 }

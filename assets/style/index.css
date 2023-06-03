@@ -18,7 +18,7 @@ header > .banner {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: clamp(10px, 20%, 20px);
-    min-width: 400px;
+    width: 100%;
     margin: 30px 0;
 }
 
@@ -41,7 +41,156 @@ header > .banner {
 /* Conheça o ambiente */ 
 
 #conheca-o-ambiente {
-    text-align: center;
     background: #000000;
     color: #ffffff;
+}
+
+#conheca-o-ambiente > h2 {
+    text-align: center;
+}
+
+.locais-ambiente {
+    width: calc(100% + var(--horizontal-padding));
+    overflow: scroll hidden;
+    gap: 20px;
+    display: flex;
+    clear: both;
+}
+
+.locais-ambiente::-webkit-scrollbar {
+    width: 10px;
+    height: 7px;
+}
+
+.locais-ambiente::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background-color: #000000;
+}
+
+.locais-ambiente::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #ffffff6d;
+}
+
+.locais-ambiente::-webkit-scrollbar-thumb:active, .locais-ambiente::-webkit-scrollbar-thumb:hover {
+    background-color: #FFFFFF;
+}
+
+.local {
+    position: relative;
+    z-index: 10;
+    width: 30vw;
+    max-width: 519px;
+    min-width: 300px;
+    height: 60vh;
+    max-height: 594px;
+    flex-shrink: 0;
+}
+
+/* Efeito gradiente */
+.local::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+    z-index: 4;
+}
+
+.local > .fundo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    box-sizing: border-box;
+    
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
+}
+
+.local > .nome {
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 2rem;
+    text-align: center;
+    
+    z-index: 5;
+}
+
+.caracteristicas {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.caracteristicas > .caracteristica {
+    gap: 10px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.caracteristica > .info h2 {
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.caracteristica > .icon-container {
+    height: 100%;
+    min-width: 50px;
+}
+
+.icon-container > .icon {
+    width: 100%;
+}
+
+.caracteristica > .info p {
+    color: #787878;
+}
+
+/* Atividades práticas */
+#atividades-praticas {
+    display: flex;
+}
+
+#atividades-praticas .col {
+    flex: 1;
+}
+
+.atividades {
+    display: flex;
+}
+
+.atividade.active > h3 {
+    color: #4A0074;
+}
+
+.atividade.active > h3::before {
+    content: '- ';
+}
+
+.atividade {
+    user-select: none;
+}
+
+.atividade > p {
+    transition: .2s ease;
+    height: 0;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+    .caracteristicas {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .atividades-img-container {
+        display: none;
+    }
 }
