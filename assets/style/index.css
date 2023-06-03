@@ -156,6 +156,7 @@ header > .banner {
 /* Atividades práticas */
 #atividades-praticas {
     display: flex;
+    padding: var(--vertical-padding) var(--horizontal-padding);
 }
 
 #atividades-praticas .col {
@@ -164,6 +165,7 @@ header > .banner {
 
 .atividades {
     display: flex;
+    flex-direction: column;
 }
 
 .atividade.active > h3 {
@@ -176,6 +178,7 @@ header > .banner {
 
 .atividade {
     user-select: none;
+    max-width: 500px;
 }
 
 .atividade > p {
@@ -183,6 +186,14 @@ header > .banner {
     height: 0;
     overflow: hidden;
 }
+
+.atividades-img-container{
+    width: 400px;
+    height: 400px;
+    background-color: grey;
+}
+
+
 
 @media screen and (max-width: 768px) {
     .caracteristicas {

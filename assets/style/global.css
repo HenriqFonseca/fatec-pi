@@ -89,7 +89,7 @@ main.wrapper {
 }
 
 main > section {
-    padding: calc(var(--vertical-padding) * 2) var(--horizontal-padding);
+    padding: calc(var(--vertical-padding) * 3) var(--horizontal-padding);
 }
 
 section > .description {
@@ -104,7 +104,7 @@ section.wrapper {
 
 .section-title {
     text-transform: uppercase;
-    margin-bottom: 20px;
+    margin-bottom: 60px;
 }
 
 /* BTN */
