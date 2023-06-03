@@ -4,6 +4,8 @@ header > .banner {
     background-image: url('../img/index/banner-index.png');
 }
 
+/* Aulas Interativas */
+
 #aulas-interativas {
     text-align: center;
     display: flex;
@@ -29,9 +31,17 @@ header > .banner {
 }
 
 #aulas-interativas > .fotos > .foto:hover {
-    transform: scale(1.1);
+    transform: rotate(3deg);
 }
 
 #aulas-interativas > .fotos > .foto:nth-child(1) { grid-area: 1 / 1 / 3 / 2; }
 #aulas-interativas > .fotos > .foto:nth-child(2) { grid-area: 1 / 2 / 2 / 3; }
 #aulas-interativas > .fotos > .foto:nth-child(3) { grid-area: 2 / 2 / 3 / 3; }
+
+/* Conheça o ambiente */ 
+
+#conheca-o-ambiente {
+    text-align: center;
+    background: #000000;
+    color: #ffffff;
+}

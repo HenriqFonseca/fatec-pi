@@ -1,3 +1,12 @@
+.game {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000000;
+
+}
+
 .notes-container{
     display: flex;
     align-items: center;
