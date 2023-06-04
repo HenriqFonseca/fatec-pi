@@ -125,7 +125,7 @@ header > .banner {
 .caracteristicas {
     display: grid;
     grid-template-columns: 2fr 2fr;
-    margin-top: 20px;
+    margin-top: calc(var(--vertical-padding) * 2);
     gap: 20px;
 }
 
@@ -156,16 +156,18 @@ header > .banner {
 /* Atividades práticas */
 #atividades-praticas {
     display: flex;
-    padding: var(--vertical-padding) var(--horizontal-padding);
+    justify-content: space-evenly;
 }
 
-#atividades-praticas .col {
-    flex: 1;
+
+.col{
+    width:45%
 }
 
 .atividades {
     display: flex;
     flex-direction: column;
+    width: 45%;
 }
 
 .atividade.active > h3 {
@@ -188,11 +190,59 @@ header > .banner {
 }
 
 .atividades-img-container{
-    width: 400px;
-    height: 400px;
-    background-color: grey;
+    margin-top: 16px;
+    width: 45%;
+    max-width: 450px;
+    max-height: 450px;
 }
 
+.atividades-img-container > img{
+    width: 100%;
+    height: 100%;
+}
+
+/* SOBRE A ESCOLA */
+#sobre-escola{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+#sobre-escola .center{
+    text-align: center;
+}
+
+.section-title{
+    margin-bottom: 30px !important;
+}
+
+.content-sobre-escola{
+    display: flex;
+    justify-content: space-between;
+}
+
+.sobre-escola-img{
+    width: 40%;
+}
+
+
+.sobre-escola-img > img{
+    max-width: 400px;
+    width: 100%;
+}
+
+.sobre-escola-text{
+    width: 50%;
+}
+
+.sobre-escola-text > p{
+    margin-top: 26px;
+    font-size: var(--h3);
+}
+
+.sobre-escola-text > a{
+    margin-top: 26px;
+}
 
 
 @media screen and (max-width: 768px) {
@@ -204,4 +254,25 @@ header > .banner {
     .atividades-img-container {
         display: none;
     }
+
+
+    /* SOBRE A ESCOLA */
+    
+    .content-sobre-escola{
+        position:relative;
+    }
+    .sobre-escola-img{
+        position:absolute;
+        display: flex;
+        justify-content: center ;
+        top: -36px;
+        opacity:0.1;
+        width:100%;
+    }
+
+    .sobre-escola-text{
+        width:100%;
+    }
+
+
 }

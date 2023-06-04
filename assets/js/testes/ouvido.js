@@ -55,7 +55,7 @@ if(btnTocar){
     
 }
 
-const path = '../../assets/audios/notas/';
+const path = '../assets/audios/notas/';
 
 function playNote(note) {
     return new Promise(res => {

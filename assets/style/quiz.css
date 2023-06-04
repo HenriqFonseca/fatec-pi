@@ -1,0 +1,23 @@
+@import 'global.css';
+@import 'testes-musicais.css';
+
+
+
+
+.nivel-atual {
+    color: #FFB800;
+    text-transform: uppercase;
+    width: 100% !important;
+}
+
+#quiz-pergunta {
+    font-size: clamp(1rem, 10vw, 3rem);
+    width: 70%;
+    margin-bottom: 40px;
+}
+
+@media screen and (max-width: 768px) {
+    #quiz-pergunta {
+        width: 100%;
+    }
+}

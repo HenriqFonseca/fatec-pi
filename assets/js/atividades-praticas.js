@@ -1,32 +1,10 @@
 const atividades = document.querySelectorAll('.atividades > .atividade');
 const answerPadding = 20; // px
 
-// questions.forEach((question, i)=> {
-
-//     let questionElement = question.children[0];
-//     let answerElement = question.children[1]
-
-//     questionElement.onclick = () => {
-//         removeActiveFromAll();
-//         question.classList.add('active');
-
-//         let answerElementHeight = answerElement.style.height;
-
-//         if(answerElementHeight == 0){
-//             answerElement.style.height = answerElement.scrollHeight + 'px'
-//         } else {
-//             answerElement.style.height = ''
-//         }
-//     }
-// })
-
-// function removeActiveFromAll() {
-//     questions.forEach((question) => {
-//         question.classList.remove('active')
-//     })
-// }
-
 let contador = 0;
+
+// Colocar cada imagem correspondente a posição da atividade 
+let imagens = [];
 
 window.onload = () => {
     setActive(atividades[contador])

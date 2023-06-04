@@ -1,10 +1,10 @@
 .game {
-    height: 100vh;
+    height: 100vh !important;
+    padding: 0 !important;
     display: flex;
     align-items: center;
     justify-content: center;
     background: #000000;
-
 }
 
 .notes-container{
@@ -45,6 +45,12 @@
     opacity: .7;
 }
 
+.btn {
+    font-weight: 700;
+    font-family: var(--primary-font);
+    border-width: 4px;
+}
+
 .btn.playing {
     background: #fff;
     color: #000;
@@ -73,7 +79,21 @@
 
 @media screen and (max-width: 768px) {
     .notes-container {
-        gap: 15px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 60px;
+    }
+
+    .teste-jogo > .buttons{
+        flex-direction: column;
+    }
+
+    .buttons {
+        width: 100%;
+    }
+
+    .buttons > .btn{
+        width: 100%;
     }
 
     .notes-container > .note {
