@@ -1,11 +1,8 @@
 @import 'global.css';
 
-main{
-    position: relative;
-}
 
 .container-info{ 
-    transform: translateY(-75px) !important;
+    transform: translateY(-66px) !important;
     background-color: #fff;
     display: flex;
     justify-content: space-evenly;
@@ -19,9 +16,127 @@ main{
 .info-item{
     display: flex;
     gap:20px;
-    align-items: center;
+    align-items: flex-start;
 }
+
+.info-item:nth-child(3){
+    align-items: center;
+    
+}
+.info-item:nth-child(3) h2{
+    margin: 0;
+}
+
 
 .info-item  p{
     margin: 0px !important;
+}
+
+.info-item > img{
+    align-self: center;
+    width: clamp(50px, 5vw, 80px);
+}
+
+.item-text > h2{
+    font-size: clamp(1.25rem, 3vw, 2rem) !important;
+    margin-top: 0;
+}
+
+.item-text > h4{
+    font-size: clamp(0.8rem, 1rem,1.2rem) !important;
+    margin: 0px !important;
+    font-weight: 100;
+}
+
+@media screen and (max-width:768px) {
+    .container-info{
+        align-items: center;
+        flex-direction: column;
+        width: fit-content;
+        margin: auto;
+        gap: 30px;
+        transform: translateY(-145.5px) !important;
+    }
+
+    .info-item{
+        width: 100%;
+    }
+}
+
+
+/* SEÇAO LOCATION E FORMULARIO*/
+
+#location-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 var(--horizontal-padding) 0 var(--horizontal-padding);
+}
+
+.contact-form{
+height: 100%;
+width: 40%;
+}
+
+.map-container{
+}
+
+h2{
+    margin-top: 0;
+}
+
+.input-container{
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    height: 100%;
+}
+
+.input-item{
+    color: #fff;
+    background-color: black;
+    padding: 20px;
+    border-radius: 5px;
+    font-family: var(--primary-font);
+    font-size: var(--h3);
+    outline: 0;
+    border: none;
+}
+
+textarea{
+    resize: none;
+}
+
+#btn-contact{
+    border: none;
+    border-radius: 5px;
+    padding: 20px;
+    font-family: var(--primary-font);
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+@media screen and (max-width:1080px) {
+    #location-container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-form{
+        width: 90%;
+        padding: 0 var(--horizontal-padding) 0 var(--horizontal-padding) ;
+    }
+    .map-container{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: calc(var(--vertical-padding) *3) var(--horizontal-padding) 0 var(--horizontal-padding) ;
+        width: 90%;
+    }
+
+    iframe{
+        width:clamp(300px, 100%, 600px );
+        height:clamp(300px, 50vw, 600px );
+    }
+
+
 }
