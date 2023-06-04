@@ -125,6 +125,8 @@ section.wrapper {
     background: transparent;
     line-height: 2rem;
     font-family: 'Roboto Condensed', sans-serif;
+    line-height: 20px;
+    text-align: center;
 }
 
 .btn.btn:is(a, button).dark {
