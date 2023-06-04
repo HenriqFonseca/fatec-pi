@@ -2,6 +2,7 @@
 
 header > .banner {
     background-image: url('../img/index/banner-index.png');
+    height: 35vh;
 }
 
 /* Aulas Interativas */
@@ -154,52 +155,52 @@ header > .banner {
 }
 
 /* Atividades práticas */
+
 #atividades-praticas {
-    display: flex;
-    justify-content: space-evenly;
+    background-image: url('../img/index/atividades-praticas/fundo.png');
+    background-size: cover;
+    padding: calc(var(--vertical-padding) * 4) var(--horizontal-padding);
+    color: #fff;
 }
 
-
-.col{
-    width:45%
+#atividades-praticas h1 {
+    font-size: clamp(1.5rem, 8vw, 2.5rem);
+    text-transform: uppercase;
+    margin: 0 0 20px 0;
 }
 
-.atividades {
-    display: flex;
-    flex-direction: column;
-    width: 45%;
-}
-
-.atividade.active > h3 {
-    color: #4A0074;
-}
-
-.atividade.active > h3::before {
-    content: '- ';
-}
-
-.atividade {
-    user-select: none;
-    max-width: 500px;
-}
-
-.atividade > p {
-    transition: .2s ease;
-    height: 0;
-    overflow: hidden;
-}
-
-.atividades-img-container{
-    margin-top: 16px;
-    width: 45%;
-    max-width: 450px;
-    max-height: 450px;
-}
-
-.atividades-img-container > img{
+.atividades-showroom {
     width: 100%;
-    height: 100%;
+    height: 50vh;
+    box-sizing: border-box;
+    padding: 30px 40px;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    background-size: cover;
+    background-position: center;
 }
+
+.atividades-showroom:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+    z-index: 4;
+}
+
+.atividades-showroom > .info {
+    width: 40%;
+    z-index: 5;
+}
+
+.atividades-showroom > .info p {
+    color: #979797;
+}
+
 
 /* SOBRE A ESCOLA */
 #sobre-escola{
@@ -251,10 +252,10 @@ header > .banner {
         flex-direction: column;
     }
 
-    .atividades-img-container {
-        display: none;
+    /* Atividades práticas */
+    .atividades-showroom > .info {
+        width: auto;
     }
-
 
     /* SOBRE A ESCOLA */
     

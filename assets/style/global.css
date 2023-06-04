@@ -72,7 +72,7 @@ header > .banner {
     justify-content: center;
     align-items: center;
     padding: calc(var(--navbar-height) + var(--vertical-padding)) 5vw var(--navbar-height) 5vw;
-    height: 35vh;
+    height: 15vh;
     background-size: cover;
     text-align: center;
     background-position: center;

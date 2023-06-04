@@ -1,0 +1,27 @@
+@import 'global.css';
+
+main{
+    position: relative;
+}
+
+.container-info{ 
+    transform: translateY(-75px) !important;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-evenly;
+    padding: var(--vertical-padding)  var(--horizontal-padding);
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 8px 26px -7px rgba(0,0,0,0.61);
+    -moz-box-shadow: 0px 8px 26px -7px rgba(0,0,0,0.61);
+    box-shadow: 0px 8px 26px -7px rgba(0,0,0,0.61);
+}
+
+.info-item{
+    display: flex;
+    gap:20px;
+    align-items: center;
+}
+
+.info-item  p{
+    margin: 0px !important;
+}

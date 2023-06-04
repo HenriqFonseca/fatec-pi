@@ -1,67 +1,46 @@
-const atividades = document.querySelectorAll('.atividades > .atividade');
-const answerPadding = 20; // px
+const atividadesSlides = [
+    {
+        titulo: 'APRESENTAÇÕES',
+        desc: 'Recorrentemente fazemos apresentações com os nossos alunos, formando diversos tipos de bandas personalizadas para cada nível musical.', 
+        imgFile: 'apresentacoes.jpg'
+    },
+    {
+        titulo: 'RECITAIS',
+        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vel dictum urna, quis tincidunt justo. Proin venenatis sollicitudin dui.', 
+        imgFile: 'recitais.jpg'
+    },
+    {
+        titulo: 'AUDIÇÕES',
+        desc: 'Donec consequat odio scelerisque nisl elementum, sit amet lacinia est dictum. Quisque bibendum dolor non enim sodales pharetra.', 
+        imgFile: 'audicoes.jpg'
+    }
+]
 
-let contador = 0;
+let currentSlide = 1;
 
-// Colocar cada imagem correspondente a posição da atividade 
-let imagens = [];
+const showroomElement = document.querySelector('.atividades-showroom');
+const tituloElement = document.querySelector('#atividades-titulo');
+const descElement = document.querySelector('#atividades-desc');
 
-window.onload = () => {
-    setActive(atividades[contador])
+const imgsPath = "/assets/img/index/atividades-praticas"; 
 
-    contador++;
-}
+window.onload = () => { mostrarSlideAtual() }
 
-const changeElement = () => {
-    if(contador > atividades.length - 1){
-        contador = 0; 
+setInterval(passarSlide, 2000)
+
+function passarSlide() {
+    if(currentSlide > atividadesSlides.length){
+        currentSlide = 1;
     }
 
-    setActive(atividades[contador]);
-    contador++;
+    mostrarSlideAtual()
+
+    currentSlide++;
 }
 
-let changeElementInterval = setInterval(() => {
-   changeElement();
-}, 7000)
-
-
-atividades.forEach((atividade, i) => {
-    const nomeAtividade = atividade.children[0];
-
-    nomeAtividade.onclick = () => {
-        setActive(atividade, i);
-    }
-})
-
-function setActive(element, index) {
-   
-    removeActiveFromAll();
-
-    element.classList.add('active');
-
-    const descAtividade = element.children[1];
-
-    if(index !== undefined) {
-        clearInterval(changeElementInterval);
-        changeElementInterval = setInterval(changeElement, 7000)
-        
-        if(index == contador - 1){
-            descAtividade.style.height = descAtividade.scrollHeight + 'px';
-            return -1
-        }
-
-        contador = index + 1;
-    }
-
-    descAtividade.style.height = descAtividade.scrollHeight + answerPadding +  'px';
-}
-
-function removeActiveFromAll() {
-    atividades.forEach((atividade) => {
-        atividade.classList.remove('active')
-        const descAtividade = atividade.children[1];
-        descAtividade.style.height = '';
-        
-    })
+function mostrarSlideAtual() {
+    let actualSlideObject = atividadesSlides[currentSlide - 1];
+    tituloElement.innerText = actualSlideObject.titulo;
+    descElement.innerText = actualSlideObject.desc;
+    showroomElement.style.backgroundImage = `url(${imgsPath}/${actualSlideObject.imgFile})`;
 }
