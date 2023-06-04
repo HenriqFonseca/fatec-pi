@@ -26,7 +26,7 @@ const imgsPath = "/assets/img/index/atividades-praticas";
 
 window.onload = () => { mostrarSlideAtual() }
 
-setInterval(passarSlide, 2000)
+setInterval(passarSlide, 10000)
 
 function passarSlide() {
     if(currentSlide > atividadesSlides.length){
