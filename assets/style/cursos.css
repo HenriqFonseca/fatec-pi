@@ -9,6 +9,14 @@
     padding: 20px;
 }
 
+.course-item:last-of-type{
+    padding-bottom: 20px;
+}
+
+.btn{
+    margin-bottom: 30px;
+}
+
 .course-icon{
     width: 30px;
     margin: 0;
