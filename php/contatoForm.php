@@ -30,7 +30,11 @@
   //Enviar
   $email = mail($destino, $assunto, $arquivo, $headers);
   
-  echo $email;
+  if($email){
+    echo "enviou";
+  }else{
+    echo "n enviou";
+  }
 
   echo "<meta http-equiv='refresh' content='10;URL=../contato.html'>";
 ?>
