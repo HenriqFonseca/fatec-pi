@@ -1,6 +1,6 @@
 <?php
 
-  echo "Contato" . $_POST['mensagem']. "<br>" .$_POST['mensagem']. "<br.". $_POST['mensagem'];
+  echo "Contato" . $_POST['nome']. "<br>" .$_POST['contatoEmail']. "<br.". $_POST['mensagem'];
 
   //Variáveis
   $email = $_POST['contatoEmail'];
