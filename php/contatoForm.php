@@ -30,7 +30,7 @@
   //Enviar
   $email = mail($destino, $assunto, $arquivo, $headers);
   
-  if($email){
+  if($email == true){
     echo "enviou";
   }else{
     echo "n enviou";
