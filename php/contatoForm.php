@@ -1,6 +1,5 @@
 <?php
 
-  echo "Contato" . $_POST['nome']. "<br>" .$_POST['contatoEmail']. "<br.". $_POST['mensagem'];
 
   //Variáveis
   $email = $_POST['contatoEmail'];
@@ -9,7 +8,6 @@
   $data_envio = date('d/m/Y');
   $hora_envio = date('H:i:s');
   
-  echo "<br>". $mensagem;
   //Compo E-mail
   $arquivo = "
     <html>
@@ -30,7 +28,9 @@
   $headers .= "From: $nome <$email>";
 
   //Enviar
-  mail($destino, $assunto, $arquivo, $headers);
+  $email = mail($destino, $assunto, $arquivo, $headers);
   
+  echo $email;
+
   echo "<meta http-equiv='refresh' content='10;URL=../contato.html'>";
 ?>
