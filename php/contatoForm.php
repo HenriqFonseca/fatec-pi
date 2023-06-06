@@ -1,4 +1,7 @@
 <?php
+
+  echo "Contato" . $_POST['contatoEmail'];
+
   //Variáveis
   $email = $_POST['contatoEmail'];
   $nome = $_POST['nome'];
@@ -28,5 +31,5 @@
   //Enviar
   mail($destino, $assunto, $arquivo, $headers);
   
-  echo "<meta http-equiv='refresh' content='10;URL=../contato.php'>";
+  echo "<meta http-equiv='refresh' content='10;URL=../contato.html'>";
 ?>
