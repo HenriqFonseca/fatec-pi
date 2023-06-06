@@ -8,7 +8,8 @@
   $mensagem = $_POST['mensagem'];
   $data_envio = date('d/m/Y');
   $hora_envio = date('H:i:s');
-
+  
+  echo "<br>". $mensagem;
   //Compo E-mail
   $arquivo = "
     <html>
