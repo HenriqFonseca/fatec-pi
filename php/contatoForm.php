@@ -35,7 +35,9 @@
   
   //Enviar
   $email = mail($destino, $assunto, $arquivo, $headers);
-  
+  echo "<br><br>$email";
+
+
   if($email == true){
     echo "enviou";
   }else{
