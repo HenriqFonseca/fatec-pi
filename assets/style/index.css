@@ -267,8 +267,9 @@ header > .banner {
         display: flex;
         justify-content: center ;
         top: -36px;
-        opacity:0.1;
+        opacity: 0.05;
         width:100%;
+        z-index: -1;
     }
 
     .sobre-escola-text{
