@@ -1,2 +1,45 @@
+@import 'global.css';
 @import 'navbar.css';
 @import 'footer.css';
+
+header > .banner {
+    background-image: url('../img/sobre/fundo.png');
+}
+
+.about-container {
+    display: flex;
+    padding: calc(var(--vertical-padding) * 2) var(--horizontal-padding);
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-side {
+    width: 40%;
+}
+
+.video-side {
+    flex: 1;
+}
+
+.video {
+    width: 100%;
+}
+
+.video-side video {
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+    }
+
+    .text-side {
+        width: 100%;
+    }
+    
+    .video-side {
+        width: 100%;
+    }
+}
