@@ -6,12 +6,12 @@ const atividadesSlides = [
     },
     {
         titulo: 'RECITAIS',
-        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vel dictum urna, quis tincidunt justo. Proin venenatis sollicitudin dui.', 
+        desc: 'Evolua de forma prática através de nossos recitais', 
         imgFile: 'recitais.jpg'
     },
     {
         titulo: 'AUDIÇÕES',
-        desc: 'Donec consequat odio scelerisque nisl elementum, sit amet lacinia est dictum. Quisque bibendum dolor non enim sodales pharetra.', 
+        desc: 'Realize audições e coloque em prática suas habilidades', 
         imgFile: 'audicoes.jpg'
     }
 ]
