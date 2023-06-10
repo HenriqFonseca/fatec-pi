@@ -121,8 +121,12 @@ p {
     font-family: var(--seconday-font);
 }
 
-.about-project-img {
-    min-width: 45%;
+.about-project-img{
+    width: 50%;
+}
+
+.about-project-img>img {
+    width: 100%;
 }
 
 
