@@ -61,6 +61,10 @@ body, html {
     font-family: var(--secondary-font);
 }
 
+.darkmode-toggle {
+    z-index: 999;
+}
+
 
 header > .banner {
     background-color: var(--primary-color);
@@ -76,6 +80,7 @@ header > .banner {
     background-size: cover;
     text-align: center;
     background-position: center;
+    isolation: isolate;
 }
 
 header > .banner > .title {
@@ -150,6 +155,42 @@ section.wrapper {
         color: #000;
     }
 }
+
+#acessibilidade-card {
+    position: fixed;
+    transform: translateX(65%);
+    right: 0;
+    bottom: 70px;
+    font-family: sans-serif;
+    background: #0781C4;
+    border-radius: 10px 0 0 10px;
+    box-shadow: 2px 2px 32px 25px rgba(0, 0, 0, .03);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .2s cubic-bezier(0.23, -0.14, 0.23, 0.7);
+}
+
+#acessibilidade-card:hover {
+    transform: translateX(0);
+}
+
+#acessibilidade-card > .icon{
+    width: 50px;
+}
+
+#acessibilidade-card button {
+    background: transparent;
+    border: none;
+    user-select: none;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    color: #fff;
+    font-size: 1rem;
+}
+
 /* SEPARAR SEÇÕES */
 .divider {
     width: 100%;
