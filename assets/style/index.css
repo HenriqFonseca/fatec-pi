@@ -1,7 +1,7 @@
 @import 'global.css';
 
 header > .banner {
-    background-image: url('../img/index/banner-index.svg');
+    background-image: url('../img/index/banner-index.img');
     height: 35vh;
 }
 
